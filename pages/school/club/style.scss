@@ -26,6 +26,13 @@ img {
     height: 100%;
 }
 
+hr {
+    border: none;
+    border-top: 5px double black; //???
+    width: 70vw;
+    margin-bottom: 20px;
+}
+
 .container {
     min-height: 100vh;
     display: flex;
@@ -68,11 +75,11 @@ img {
         content: '';
         position: absolute;
         left: 0;
-        top: -50%;
+        top: 0;
         height: 100%;
         width: 100%;
         background-color: $bg-white;
-        opacity: 0;
+        opacity: .5;
         z-index: -1;
     }
 
@@ -106,58 +113,297 @@ img {
     .about {
         // Section Title
         &-top {
-            max-width: 600px;
+            max-width: 700px;
         }
-        // Description
+    }
+    .container {
+        min-height: 50vh;
+    }
+}
+/* ====== End About Section ====== */
+
+
+/* ====== Sports club Section ====== */
+#sports {
+    .sports {
+        flex-direction: column;
+        margin: 70px auto;
+
+        &-top {
+            max-width: 1000px;
+        }
+
         &-bottom {
-            flex-direction: row;
-            align-items: center;
+            display: flex;
             justify-content: center;
-            margin: 20px;
-            
-            @media (min-width:768px) {
-                display: flex;
-                flex-wrap: wrap;
+            flex-wrap: wrap;
+            // Tablet
+            @media only screen and (min-width:768px) {
+                flex-basis: 45%;
+                margin: 2.5%;
+            }
+            // Desktop
+            @media only screen and (min-width:1200px) {
+                flex-basis: 22%;
+                margin: 1.5%;
             }
         }
 
         &-img {
-            margin: 0 auto;
-            margin-bottom: 10px;
-            @media (min-width:640px) {
-                width: 80%;
-            }
-            @media (min-width:601px) {
-                width: 70%;
-            }
-            // Tablet
-            @media (min-width:768px) {
-                width: 50%;
-            }
-            // Desktop
-            @media (min-width:1200px) {
-                width: 40%;
+            height: 20rem;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+
+            img {
+                object-fit: cover;
+                transition: .3s ease;
             }
         }
+        
+        &-item {
+            flex-basis: 80%;
+            display: inline-block;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 13px;
+            padding-bottom: 20px;
+            margin: 3%;
 
-        &-text {
-            text-align: left;
-            font-size: 1.5rem;
-            font-weight: 500;
+            background-size: cover;
+            box-shadow: 0 0 18px 0 $box-shadow;
+            transition: 0.3s ease box-shadow;
+            overflow: hidden;
+            
+            @media (min-width:600px) {
+                flex-basis: 65%;
+            }
             // Tablet
             @media (min-width:768px) {
-                font-size: 1.75rem;
-                padding: 20px;
-                width: 50%;
+                flex-basis: 45%;
+                margin: 2.5%;  
             }
             // Desktop
             @media (min-width:1200px) {
-                font-size: 2rem;
+                flex-basis: 30%;
+                margin: 1.5%;  
+            }
+
+            h2 {
+                padding: 5px 20px;
+                font-size: 2.4rem;
+                font-weight: 700;
+            }
+
+            p {
+                padding: 0 20px;
+                font-size: 1.6rem;
+                font-weight: 300;
+                text-indent: 1rem;
+                text-align: left;
+            }
+            &:hover {
+                box-shadow: 0px 0px 5px 0px $box-shadow;
+                // 写真を拡大
+                .sports-img img {
+                    transform: scale(1.1);
+                }
             }
         }
     }
 }
-/* ====== End About Section ====== */
+/* ====== end Sports club Section ====== */
+
+
+/* ====== culture club Section ====== */
+#culture {
+    background: $bg-white;
+    .culture {
+        flex-direction: column;
+        padding: 70px 0;
+
+        &-top {
+            max-width: 1000px;
+        }
+
+        &-bottom {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            // Tablet
+            @media only screen and (min-width:768px) {
+                flex-basis: 45%;
+                margin: 2.5%;
+            }
+            // Desktop
+            @media only screen and (min-width:1200px) {
+                flex-basis: 22%;
+                margin: 1.5%;
+            }
+        }
+
+        &-img {
+            height: 20rem;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+
+            img {
+                object-fit: cover;
+                transition: .3s ease;
+            }
+        }
+        
+        &-item {
+            flex-basis: 80%;
+            display: inline-block;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 13px;
+            padding-bottom: 20px;
+            margin: 3%;
+
+            background-size: cover;
+            box-shadow: 0 0 18px 0 $box-shadow;
+            transition: 0.3s ease box-shadow;
+            overflow: hidden;
+            
+            @media (min-width:600px) {
+                flex-basis: 65%;
+            }
+            // Tablet
+            @media (min-width:768px) {
+                flex-basis: 45%;
+                margin: 2.5%;  
+            }
+            // Desktop
+            @media (min-width:1200px) {
+                flex-basis: 30%;
+                margin: 1.5%;  
+            }
+
+            h2 {
+                padding: 5px 20px;
+                font-size: 2.4rem;
+                font-weight: 700;
+            }
+
+            p {
+                padding: 0 20px;
+                font-size: 1.6rem;
+                font-weight: 300;
+                text-indent: 1rem;
+                text-align: left;
+            }
+            &:hover {
+                box-shadow: 0px 0px 5px 0px $box-shadow;
+                // 写真を拡大
+                .culture-img img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+/* ====== end culture club Section ====== */
+
+
+/* ====== tech club Section ====== */
+#tech {
+    .tech {
+        flex-direction: column;
+        margin: 70px auto;
+
+        &-top {
+            max-width: 1000px;
+        }
+
+        &-bottom {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            // Tablet
+            @media only screen and (min-width:768px) {
+                flex-basis: 45%;
+                margin: 2.5%;
+            }
+            // Desktop
+            @media only screen and (min-width:1200px) {
+                flex-basis: 22%;
+                margin: 1.5%;
+            }
+        }
+
+        &-img {
+            height: 20rem;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+
+            img {
+                object-fit: cover;
+                transition: .3s ease;
+            }
+        }
+        
+        &-item {
+            flex-basis: 80%;
+            display: inline-block;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 13px;
+            padding-bottom: 20px;
+            margin: 3%;
+
+            background-size: cover;
+            box-shadow: 0 0 18px 0 $box-shadow;
+            transition: 0.3s ease box-shadow;
+            overflow: hidden;
+            
+            @media (min-width:600px) {
+                flex-basis: 65%;
+            }
+            // Tablet
+            @media (min-width:768px) {
+                flex-basis: 45%;
+                margin: 2.5%;  
+            }
+            // Desktop
+            @media (min-width:1200px) {
+                flex-basis: 30%;
+                margin: 1.5%;  
+            }
+
+            h2 {
+                padding: 5px 20px;
+                font-size: 2.4rem;
+                font-weight: 700;
+            }
+
+            p {
+                padding: 0 20px;
+                font-size: 1.6rem;
+                font-weight: 300;
+                text-indent: 1rem;
+                text-align: left;
+            }
+            &:hover {
+                box-shadow: 0px 0px 5px 0px $box-shadow;
+                // 写真を拡大
+                .tech-img img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+/* ====== end tech club Section ====== */
 
 
 /* ====== Article Section ====== */

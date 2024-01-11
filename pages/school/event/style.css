@@ -58,11 +58,11 @@ img {
   content: "";
   position: absolute;
   left: 0;
-  top: -50%;
+  top: 0;
   height: 100%;
   width: 100%;
   background-color: #fff;
-  opacity: 0;
+  opacity: 0.5;
   z-index: -1;
 }
 #hero .hero {
@@ -148,6 +148,24 @@ img {
 }
 
 /* ====== End About Section ====== */
+/* ====== Gallery Section ====== */
+#gallery .gallery {
+  flex-direction: column;
+  margin: 70px auto;
+}
+#gallery .gallery-top {
+  max-width: 500px;
+}
+#gallery .gallery-bottom {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#gallery .gallery-list {
+  list-style-type: none;
+}
+
+/* ====== End Gallery Section ====== */
 /* ====== Article Section ====== */
 #article .article {
   flex-direction: column;
