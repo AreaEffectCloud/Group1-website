@@ -68,11 +68,11 @@ img {
         content: '';
         position: absolute;
         left: 0;
-        top: -50%;
+        top: 0;
         height: 100%;
         width: 100%;
         background-color: $bg-white;
-        opacity: 0;
+        opacity: 0.6;
         z-index: -1;
     }
 
@@ -164,7 +164,7 @@ img {
 #article {
     .article {
         flex-direction: column;
-        margin: 30px auto;
+        margin: 70px auto;
 
         &-top {
             max-width: 500px;

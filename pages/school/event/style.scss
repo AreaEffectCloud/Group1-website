@@ -68,11 +68,11 @@ img {
         content: '';
         position: absolute;
         left: 0;
-        top: -50%;
+        top: 0;
         height: 100%;
         width: 100%;
         background-color: $bg-white;
-        opacity: 0;
+        opacity: .5;
         z-index: -1;
     }
 
@@ -158,6 +158,30 @@ img {
     }
 }
 /* ====== End About Section ====== */
+
+
+/* ====== Gallery Section ====== */
+#gallery {
+    .gallery {
+        flex-direction: column;
+        margin: 70px auto;
+
+        &-top {
+            max-width: 500px;
+        }
+
+        &-bottom {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &-list {
+            list-style-type: none;
+        }
+    }
+}
+/* ====== End Gallery Section ====== */
 
 
 /* ====== Article Section ====== */
