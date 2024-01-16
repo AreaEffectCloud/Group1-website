@@ -83,11 +83,9 @@ img {
         padding: 0 50px;
         justify-content: flex-start;
     }
-
     .container {
         min-height: 50vh;
     }
-
     h1 {
         display: block;
         width: fit-content;
@@ -145,6 +143,7 @@ img {
             text-align: left;
             font-size: 1.5rem;
             font-weight: 500;
+            text-indent: 1rem;
             // Tablet
             @media (min-width:768px) {
                 font-size: 1.75rem;
@@ -165,12 +164,9 @@ img {
 #article {
     .article {
         flex-direction: column;
-        margin: 70px auto;
-
         &-top {
             max-width: 500px;
         }
-
         &-bottom {
             display: flex;
             justify-content: center;

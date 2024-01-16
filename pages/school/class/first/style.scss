@@ -160,6 +160,53 @@ img {
 /* ====== End About Section ====== */
 
 
+/* ====== Experiment Section ====== */
+#expt {
+    .expt {
+        flex-direction: column;
+        margin: 70px auto;
+        &-top {
+            max-width: 700px;
+        }
+        &-bottom {
+            //Tablet & Desktop
+            @media (min-width:600px) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            &-item {
+                flex-basis: 25%;
+                padding: 10px 20px;
+                margin-bottom: 20px;
+                &-img {
+                    cursor: pointer;
+                    img {
+                        @media (min-width:1300px) {
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+
+            &-text {
+                padding: 0 20px;
+                max-width: 900px;
+                p {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    text-align: left;
+                    text-indent: 1rem;
+                }
+            }
+        }
+    }
+}
+/* ====== End Experiment Section ====== */
+
+
 /* ====== Article Section ====== */
 #article {
     .article {
@@ -175,12 +222,12 @@ img {
             justify-content: center;
             flex-wrap: wrap;
             // Tablet
-            @media only screen and (min-width:768px) {
+            @media (min-width:768px) {
                 flex-basis: 45%;
                 margin: 2.5%;
             }
             // Desktop
-            @media only screen and (min-width:1200px) {
+            @media (min-width:1200px) {
                 flex-basis: 22%;
                 margin: 1.5%;
             }
