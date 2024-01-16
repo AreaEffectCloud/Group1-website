@@ -44,8 +44,6 @@ img {
   margin-bottom: 25px;
 }
 
-/* ===== Header ===== */
-/* ===== End Header ===== */
 /* ====== Hero Section ====== */
 #hero {
   background-image: url(./images/departments_top.jpg);
@@ -153,6 +151,7 @@ img {
 /* ====== Article Section ====== */
 #article .article {
   flex-direction: column;
+  margin: 70px 0;
 }
 #article .article-top {
   max-width: 500px;
@@ -162,13 +161,13 @@ img {
   justify-content: center;
   flex-wrap: wrap;
 }
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   #article .article-bottom {
     flex-basis: 45%;
     margin: 2.5%;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   #article .article-bottom {
     flex-basis: 22%;
     margin: 1.5%;
@@ -222,14 +221,16 @@ img {
   font-weight: 700;
 }
 #article .article-item span {
-  font-size: 1.8rem;
-  font-weight: 700;
   padding: 0 2px;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 #article .article-item p {
   padding: 0 20px;
   font-size: 1.6rem;
   font-weight: 300;
+  text-indent: 1rem;
+  text-align: left;
 }
 #article .article-item:hover {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1725490196);
