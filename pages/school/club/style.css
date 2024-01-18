@@ -47,12 +47,10 @@ hr {
 .section-title-description {
   font-size: 2rem;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 25px;
+  text-align: left;
+  text-indent: 1rem;
 }
 
-/* ===== Header ===== */
-/* ===== End Header ===== */
 /* ====== Hero Section ====== */
 #hero {
   background-image: url(./images/basketball.jpg);
@@ -99,6 +97,10 @@ hr {
 }
 #about .about-top {
   max-width: 700px;
+}
+#about .about-top-description {
+  padding: 10px 20px 0 20px;
+  margin-bottom: 25px;
 }
 #about .container {
   min-height: 50vh;
