@@ -71,6 +71,9 @@ img {
         width: 100%;
         background-color: $bg-white;
         opacity: 0;
+        @media (max-width:1000px) {
+            opacity: .4;
+        }
         z-index: -1;
     }
 

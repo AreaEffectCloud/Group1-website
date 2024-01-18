@@ -64,6 +64,11 @@ img {
   opacity: 0;
   z-index: -1;
 }
+@media (max-width: 1000px) {
+  #hero::after {
+    opacity: 0.4;
+  }
+}
 #hero .hero {
   max-width: 1200px;
   margin: 0 auto;

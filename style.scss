@@ -116,7 +116,7 @@ header {
     background-position: top center;
     position: relative;
     z-index: 1;
-    @media (max-width:550px) {
+    @media (max-width:667px) {
         background-image: url(./images/hero_long.jpg);
     }
     
@@ -135,16 +135,26 @@ header {
     .hero {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 50px;
         justify-content: flex-start;
+
+        &-title {
+            padding: 0 20px;
+            @media (min-width:1200px) {
+                padding: 0 40px;
+            }
+        }
     }
     
     h1 {
+        // font-size: 5rem;
+        font-size: clamp(4rem, 8vw, 5rem);
+        word-break: keep-all;
+        font-weight: 900;
+        text-align: left;
+
+        position: relative;
         display: block;
         width: fit-content;
-        font-size: 5rem;
-        font-weight: 900;
-        position: relative;
         color: black;
         text-shadow: 1px 4px 3px $bg-white;
         // animation: title_cover 2s ease forwards;
