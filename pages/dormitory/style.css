@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap");
+#faq .faq {
+  padding: 100px 20%;
+}
+@media (max-width: 1280px) {
+  #faq .faq {
+    padding: 80px 10%;
+  }
+}
+@media (max-width: 768px) {
+  #faq .faq {
+    padding: 80px 5%;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -146,6 +160,72 @@ img {
 /* ====== FAQ Section ====== */
 #faq .faq {
   flex-direction: column;
+}
+#faq .faq-top {
+  max-width: 500px;
+}
+#faq .faq-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+#faq .faq-item {
+  max-width: 1200px;
+  background: #fff;
+  box-shadow: 7.5px 7.5px 5px rgba(0, 0, 0, 0.1725490196);
+  transition: 0.5s ease box-shadow;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  #faq .faq-item {
+    font-size: 1.75rem;
+    padding: 20px 30px;
+  }
+}
+@media (min-width: 1200px) {
+  #faq .faq-item {
+    font-size: 2rem;
+  }
+}
+#faq .faq-item:hover {
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1725490196);
+}
+#faq .faq-item-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#faq .faq-item-contents p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: left;
+}
+#faq .faq-item-contents-img {
+  padding-top: 7px;
+  width: 1.8rem;
+  transform: rotate(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+#faq .faq-item-contents-img.active {
+  transform: rotate(180deg);
+}
+#faq .faq-item-answer {
+  display: none;
+  transition: display 0.5s ease;
+  background: crimson;
+  transition: background 0.5s ease;
+}
+#faq .faq-item-answer.active {
+  display: block;
+  background: #fff;
 }
 
 /* ====== End FAQ Section ====== */
