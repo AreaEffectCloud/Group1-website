@@ -34,7 +34,7 @@
                     <img src="./images/dormitory-top.jpg" alt="ダミー画像">
                 </div>
                 <div class="about-text">
-                    <p>一関工業高等専門学校は、五年生の学校です。、進学したい高校の参考にしてもらいたいからです。小中学生の皆さんに一関高専を知ってもらい、進学したい高校の参考にしてもらいたいからです。小中学生の皆さんに一関高専を知ってもらい、進学したい高校の参考にしてもらいたいからです。小中学生の皆さんに一関高専を知ってもらい、進学したい高校の参考にしてもらいたいからです。小中学生の皆さんに一関高専を知ってもらい、進学したい高校の参考にしてもらいたいからです。</p>
+                    <p>一関高専の学生寮は男子寮と女子寮があり、どちらも学校の敷地内にあります。全学生の40%を超える学生が入寮し、日課や規則を守りながら集団生活を送っています。寮には、3階建ての5つの居住棟(北寮、南寮、新南寮、東寮、白萩寮)があります。---</p>
                 </div>
             </div>
         </div>
@@ -51,48 +51,67 @@
             <div class="faq-bottom">
                 <div class="faq-item">
                     <div class="faq-item-contents">
-                        <p>Q1. 寮へは必ず入る必要がありますか。</p>
+                        <p class="faq-item-text">Q1. 寮へは必ず入らなければならないですか?</p>
                         <div class="faq-item-contents-img">
-                            <img src="./images/toggle.png" alt="ダミー画像">
+                            <img src="./images/toggle_v2.png" alt="ダミー画像">
                         </div>
                     </div>
-                    <div class="faq-item-answer">A1. 入寮は希望者だけです。</div>
+                    <div class="faq-item-answer">
+                        <p class="faq-item-text">A1. 入寮は希望者だけです。全寮制ではありません。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item-contents">
+                        <p class="faq-item-text">Q2. 希望者は全員寮に入ることができますか?</p>
+                        <div class="faq-item-contents-img">
+                            <img src="./images/toggle_v2.png" alt="ダミー画像">
+                        </div>
+                    </div>
+                    <div class="faq-item-answer">
+                        <p class="faq-item-text">A2. 定員の関係で入れない場合もあります。入寮希望者が定員を超えた場合は、基本的に公共交通機関での通学の便を考えて選考します。距離がそれほど遠くなくても、最寄り駅までの距離が遠く、公共交通機関の利便性がよくない地域の学生は入寮できます。また1年生は優先的に入寮してもらう方針ですが、過去には1、2名お断りした年がありました。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-item-contents">
+                        <p class="faq-item-text">Q. </p>
+                        <div class="faq-item-contents-img">
+                            <img src="./images/toggle_v2.png" alt="ダミー画像">
+                        </div>
+                    </div>
+                    <div class="faq-item-answer">
+                        <p class="faq-item-text">A. </p>
+                    </div>
+                </div>
+
+                <!-- Detail & Summary -->
+
+                <div class="faq-item">
+                    <div class="faq-item-contents">
+                        <p class="faq-item-text">Q. </p>
+                        <div class="faq-item-contents-img">
+                            <img src="./images/toggle_v2.png" alt="ダミー画像">
+                        </div>
+                    </div>
+                    <div class="faq-item-answer">
+                        <p class="faq-item-text">A. </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- End FAQ Section -->
 
-    <!-- Article Section -->
-    <section id="article">
-        <div class="article container">
-            <div class="article-top">
-                <h1 class="section-title">Index</h1>
-                <p class="section-title-description">目次</p>
-            </div>
-            <div class="article-bottom">
-                <div class="article-item">
-                    <a href="./pages/school/" class="article-img">
-                        <img src="./images/dormitory-top.jpg" alt="ダミー画像">
-                    </a>
-                    <h2>タイムスケジュール</h2>
-                    <p>1日の生活のスケジュール</p>
-                </div>
-                <div class="article-item">
-                    <a href="./pages/dormitory/" class="article-img">
-                        <img src="./images/school-top.jpg" alt="ダミー画像">
-                    </a>
-                    <h2>基本的な規則</h2>
-                    <p>生活する上で知っておくべきルール、日常や寮祭などのイベント</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Article Section -->
-
     <footer>
         <small>&copy; 2023 Group 1</small>
     </footer>
-    <script src="./js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.faq-item').click(function() {
+                $(this).children('.faq-item-answer').slideToggle();
+            });
+        });
+    </script>
+    <!-- <script src="./js/main.js"></script> -->
 </body>
 </html>

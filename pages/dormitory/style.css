@@ -23,6 +23,7 @@ html {
   font-size: 10px;
   font-family: "Noto Sans JP", sans-serif;
   background-color: #eee;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -142,6 +143,7 @@ img {
   text-align: left;
   font-size: 1.5rem;
   font-weight: 500;
+  text-indent: 1rem;
 }
 @media (min-width: 768px) {
   #about .about-text {
@@ -165,10 +167,9 @@ img {
   max-width: 500px;
 }
 #faq .faq-bottom {
+  max-width: 1000px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   margin: 20px;
 }
 #faq .faq-item {
@@ -177,21 +178,25 @@ img {
   box-shadow: 7.5px 7.5px 5px rgba(0, 0, 0, 0.1725490196);
   transition: 0.5s ease box-shadow;
   border-radius: 10px;
-  padding: 15px;
+  padding: 15px 50px;
+  margin: 10px;
   cursor: pointer;
+}
+#faq .faq-item-text {
   text-align: left;
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 500;
+  padding: 5px 10px;
 }
 @media (min-width: 768px) {
-  #faq .faq-item {
-    font-size: 1.75rem;
-    padding: 20px 30px;
+  #faq .faq-item-text {
+    font-size: 2.1rem;
+    padding: 20px 10px;
   }
 }
 @media (min-width: 1200px) {
-  #faq .faq-item {
-    font-size: 2rem;
+  #faq .faq-item-text {
+    font-size: 2.1rem;
   }
 }
 #faq .faq-item:hover {
@@ -202,14 +207,9 @@ img {
   align-items: center;
   justify-content: center;
 }
-#faq .faq-item-contents p {
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: left;
-}
 #faq .faq-item-contents-img {
+  display: block;
   padding-top: 7px;
-  width: 1.8rem;
   transform: rotate(0);
   transform-origin: center;
   transition: transform 0.4s ease;
@@ -219,108 +219,12 @@ img {
 }
 #faq .faq-item-answer {
   display: none;
-  transition: display 0.5s ease;
-  background: crimson;
-  transition: background 0.5s ease;
 }
 #faq .faq-item-answer.active {
   display: block;
-  background: #fff;
 }
 
 /* ====== End FAQ Section ====== */
-/* ====== Article Section ====== */
-#article {
-  background: #fff;
-}
-#article .article {
-  flex-direction: column;
-  padding: 70px 0;
-}
-#article .article-top {
-  max-width: 500px;
-}
-#article .article-bottom {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-@media (min-width: 768px) {
-  #article .article-bottom {
-    flex-basis: 45%;
-    margin: 2.5%;
-  }
-}
-@media (min-width: 1200px) {
-  #article .article-bottom {
-    flex-basis: 22%;
-    margin: 1.5%;
-  }
-}
-#article .article-img {
-  height: 20rem;
-  display: flex;
-  overflow: hidden;
-  position: relative;
-}
-#article .article-img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: 0.3s ease;
-}
-#article .article-item {
-  flex-basis: 80%;
-  display: inline-block;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 13px;
-  padding-bottom: 20px;
-  margin: 3%;
-  background-size: cover;
-  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1725490196);
-  transition: 0.3s ease box-shadow;
-  overflow: hidden;
-}
-@media (min-width: 600px) {
-  #article .article-item {
-    flex-basis: 65%;
-  }
-}
-@media (min-width: 768px) {
-  #article .article-item {
-    flex-basis: 45%;
-    margin: 2.5%;
-  }
-}
-@media (min-width: 1200px) {
-  #article .article-item {
-    flex-basis: 30%;
-    margin: 1.5%;
-  }
-}
-#article .article-item h2 {
-  padding: 5px 20px;
-  font-size: 2.4rem;
-  font-weight: 700;
-}
-#article .article-item span {
-  font-size: 1.8rem;
-  font-weight: 700;
-  padding: 0 2px;
-}
-#article .article-item p {
-  padding: 0 20px;
-  font-size: 1.6rem;
-  font-weight: 300;
-}
-#article .article-item:hover {
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1725490196);
-}
-#article .article-item:hover .article-img img {
-  transform: scale(1.1);
-}
-
 /* ====== Footer====== */
 footer {
   padding: 25px 0;
