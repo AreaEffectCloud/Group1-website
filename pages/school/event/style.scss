@@ -182,7 +182,6 @@ hr {
     .gallery {
         @extend %section-padding;
         flex-direction: column;
-        // margin: 70px auto;
 
         &-top {
             max-width: 1000px;
