@@ -1,9 +1,19 @@
-const question = document.querySelector('.faq-item');
-const img = document.querySelector('.faq-item-contents-img');
-const answer = document.querySelector('.faq-item-answer');
 
-question.addEventListener('click', ()=>{
-    img.classList.toggle('active');
-    answer.classList.toggle('active');
-})
+var faqQuestions = document.getElementsByClassName("faq-item-contents");
 
+for (var i = 0; i < faqQuestions.length; i++) {
+    faqQuestions[i].addEventListener("click", function() {
+
+        // faq-item-img
+        var faqImage = this.children[1];
+        faqImage.classList.toggle('active');
+        
+        // faq-item-answer
+        var faqAnswer = this.nextElementSibling;
+        if (faqAnswer.style.maxHeight) {
+            faqAnswer.style.maxHeight = null;
+        } else {
+            faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
+        } 
+    });
+}
