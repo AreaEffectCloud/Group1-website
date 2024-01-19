@@ -1,18 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap');
 
 $bg-white : #fff;
-$bg-gray : #eee;
+$bg-gray : #f8f8f8;
 $bg-footer : #444;
-$box-shadow : #0000002c;
+$box-shadow : rgba(0, 0, 0, 0.03);
 
 %section-padding {
-    padding: 100px 20%;
+    padding: 100px 20px;
 
-    @media (max-width: 1280px) {
-        padding: 80px 10%;
+    @media (min-width: 768px) {
+        padding: 80px 30px;
     }
-    @media (max-width: 768px) {
-        padding: 80px 5%;
+}
+
+%plain-text {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-indent: 1rem;
+    // Tablet
+    @media (min-width:768px) {
+        font-size: 1.75rem;
+    }
+    // Desktop
+    @media (min-width:1200px) {
+        font-size: 2rem;
     }
 }
 
@@ -37,6 +49,7 @@ img {
     width: 100%;
     height: 100%;
 }
+
 
 .container {
     min-height: 100vh;
@@ -116,6 +129,7 @@ img {
 #about {
     background: $bg-white;
     .about {
+        @extend %section-padding;
         &-top {
             max-width: 500px;
         }
@@ -123,7 +137,6 @@ img {
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            margin: 20px;
             
             @media (min-width:768px) {
                 display: flex;
@@ -152,7 +165,6 @@ img {
             text-align: left;
             font-size: 1.5rem;
             font-weight: 500;
-            text-indent: 1rem;
             // Tablet
             @media (min-width:768px) {
                 font-size: 1.75rem;
@@ -171,6 +183,7 @@ img {
 
 /* ====== FAQ Section ====== */
 #faq {
+    background: $bg-gray;
     .faq {
         flex-direction: column;
         @extend %section-padding;
@@ -179,54 +192,31 @@ img {
         }
         &-bottom {
             max-width: 1000px;
-            display: flex;
-            flex-direction: column;
-            margin: 20px;
+            margin-top: 10px;
         }
         &-item {
-            max-width: 1200px;
-            background: $bg-white;
-            box-shadow: 7.5px 7.5px 5px $box-shadow;
-            transition: 0.5s ease box-shadow;
+            margin-bottom: 20px;
+            padding: 24px 30px 14px;
             border-radius: 10px;
-            padding: 15px 50px;
-            margin: 10px;
-            cursor: pointer;
+            background-color: $bg-white;
+            box-shadow: 0 3px 7px 0 $box-shadow;
+
             &-text {
-                text-align: left;
-                font-size: 3rem;
-                font-weight: 500;
-                padding: 5px 10px;
-
-                @media (min-width:768px) {
-                    font-size: 2.1rem;
-                    padding: 20px 10px;
-                }
-                @media (min-width:1200px) {
-                    font-size: 2.1rem;
-                }
+                @extend %plain-text;
+                text-indent: 0;
             }
-
-            &:hover {
-                box-shadow: 0 0 18px 0 $box-shadow;
-                // .faq-item-contents-img {
-                //     transform: rotate(180deg);
-                // }
-                // .faq-item-answer {
-                //     display: block;
-                // }
-            }
-
+            
             &-contents {
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-between;
+                cursor: pointer;
+
                 &-img {
-                    display: block;
                     padding-top: 7px;
-                    transform: rotate(0);
                     transform-origin: center;
-                    transition: transform 0.4s ease;
+                    transform: rotate(0);
+                    transition: transform 0.3s ease;
                     &.active {
                         transform: rotate(180deg);
                     }
@@ -234,10 +224,10 @@ img {
             }
 
             &-answer {
-                display: none;
-                &.active {
-                    display: block;
-                }
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
+                margin: 0 0 10px 0;
             }
         }
     }
