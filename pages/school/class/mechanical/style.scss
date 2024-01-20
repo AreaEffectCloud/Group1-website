@@ -84,10 +84,12 @@ hr {
     }
 
     h1 {
-        display: block;
-        width: fit-content;
+        font-size: clamp(4rem, 8vw, 5rem);
+        word-break: keep-all;
         font-size: 5rem;
         font-weight: 700;
+        display: block;
+        width: fit-content;
         position: relative;
         color: white;
     }
@@ -165,7 +167,7 @@ hr {
 /* ====== End About Section ====== */
 
 
-/* ====== second Section ====== */
+/* ====== Study Section ====== */
 #study {
     .study {
         flex-direction: column;
@@ -185,10 +187,10 @@ hr {
             box-shadow: 7.5px 7.5px 5px $box-shadow;
             border-radius: 10px;
             padding: 20px 10px;
-            margin: 20px;
+            margin: 40px 20px;
             //Tablet & Desktop
             @media (max-width:600px) {
-                margin: 40px 20px;
+                margin: 20px;
             }
         }
         &-item {
@@ -197,7 +199,12 @@ hr {
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            padding: 0 50px 20px 50px;
+            padding: 0 0 20px 0;
+            //Tablet & Desktop
+            @media (min-width:600px) {
+                padding: 0 50px 20px 50px;
+            }
+
             &-contents {
                 width: 100%;
                 text-align: left;
@@ -216,19 +223,7 @@ hr {
         }
     }
 }
-/* ====== end second Section ====== */
-
-
-/* ====== third Section ====== */
-/* ====== end third Section ====== */
-
-
-/* ====== fourth Section ====== */
-/* ====== end fourth Section ====== */
-
-
-/* ====== fifth Section ====== */
-/* ====== end fifth Section ====== */
+/* ====== end Study Section ====== */
 
 
 /* ====== Footer====== */
