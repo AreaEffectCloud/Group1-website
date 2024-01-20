@@ -67,7 +67,7 @@ hr {
   padding: 50px 10px;
 }
 #hero h1 {
-  font-size: clamp(3.2rem, 8vw, 5rem);
+  font-size: clamp(4rem, 8vw, 5rem);
   word-break: keep-all;
   font-weight: 700;
   color: white;
@@ -148,7 +148,7 @@ hr {
 }
 
 /* ====== End About Section ====== */
-/* ====== study Section ====== */
+/* ====== Study Section ====== */
 #study .study {
   flex-direction: column;
   margin: 70px auto;
