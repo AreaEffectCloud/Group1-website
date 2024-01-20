@@ -8,19 +8,17 @@
   }
 }
 
-#faq .faq-item-text {
+#faq .faq-item-contents-text, #about .about-text {
   text-align: left;
   font-size: 1.5rem;
-  font-weight: 500;
-  text-indent: 1rem;
 }
 @media (min-width: 768px) {
-  #faq .faq-item-text {
+  #faq .faq-item-contents-text, #about .about-text {
     font-size: 1.75rem;
   }
 }
 @media (min-width: 1200px) {
-  #faq .faq-item-text {
+  #faq .faq-item-contents-text, #about .about-text {
     font-size: 2rem;
   }
 }
@@ -151,20 +149,13 @@ img {
   }
 }
 #about .about-text {
-  text-align: left;
-  font-size: 1.5rem;
   font-weight: 500;
+  text-indent: 1rem;
 }
 @media (min-width: 768px) {
   #about .about-text {
-    font-size: 1.75rem;
     padding: 20px;
     width: 50%;
-  }
-}
-@media (min-width: 1200px) {
-  #about .about-text {
-    font-size: 2rem;
   }
 }
 
@@ -184,14 +175,16 @@ img {
   margin-top: 10px;
 }
 #faq .faq-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.03);
   margin-bottom: 20px;
   padding: 24px 30px 14px;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.03);
 }
-#faq .faq-item-text {
-  text-indent: 0;
+@media (max-width: 444px) {
+  #faq .faq-item {
+    padding: 24px 15px 14px;
+  }
 }
 #faq .faq-item-contents {
   display: flex;
@@ -199,20 +192,39 @@ img {
   justify-content: space-between;
   cursor: pointer;
 }
+#faq .faq-item-contents-text {
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  transition: color 0.2s ease-in-out;
+}
 #faq .faq-item-contents-img {
   padding-top: 7px;
   transform-origin: center;
   transform: rotate(0);
-  transition: transform 0.3s ease;
-}
-#faq .faq-item-contents-img.active {
-  transform: rotate(180deg);
+  transition: transform 0.2s ease-in-out;
 }
 #faq .faq-item-answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-  margin: 0 0 10px 0;
+  transition: max-height 0.2s ease-in-out;
+  margin: 10px 30px 0 0;
+}
+#faq .faq-item-answer-text {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #333333;
+  text-align: left;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  #faq .faq-item-answer-text {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  #faq .faq-item-answer-text {
+    font-size: 1.75rem;
+  }
 }
 
 /* ====== End FAQ Section ====== */

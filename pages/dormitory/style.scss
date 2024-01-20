@@ -16,8 +16,6 @@ $box-shadow : rgba(0, 0, 0, 0.03);
 %plain-text {
     text-align: left;
     font-size: 1.5rem;
-    font-weight: 500;
-    text-indent: 1rem;
     // Tablet
     @media (min-width:768px) {
         font-size: 1.75rem;
@@ -162,18 +160,13 @@ img {
         }
 
         &-text {
-            text-align: left;
-            font-size: 1.5rem;
+            @extend %plain-text;
             font-weight: 500;
+            text-indent: 1rem;
             // Tablet
             @media (min-width:768px) {
-                font-size: 1.75rem;
                 padding: 20px;
                 width: 50%;
-            }
-            // Desktop
-            @media (min-width:1200px) {
-                font-size: 2rem;
             }
         }
     }
@@ -195,15 +188,13 @@ img {
             margin-top: 10px;
         }
         &-item {
+            background-color: $bg-white;
+            border-radius: 10px;
+            box-shadow: 0 3px 7px 0 $box-shadow;
             margin-bottom: 20px;
             padding: 24px 30px 14px;
-            border-radius: 10px;
-            background-color: $bg-white;
-            box-shadow: 0 3px 7px 0 $box-shadow;
-
-            &-text {
-                @extend %plain-text;
-                text-indent: 0;
+            @media (max-width:444px) {
+                padding: 24px 15px 14px;
             }
             
             &-contents {
@@ -212,22 +203,42 @@ img {
                 justify-content: space-between;
                 cursor: pointer;
 
+                &-text {
+                    @extend %plain-text;
+                    font-weight: 700;
+                    color: rgb(0, 0, 0);
+                    transition: color 0.2s ease-in-out;
+                }
+
                 &-img {
                     padding-top: 7px;
                     transform-origin: center;
                     transform: rotate(0);
-                    transition: transform 0.3s ease;
-                    &.active {
-                        transform: rotate(180deg);
-                    }
+                    transition: transform 0.2s ease-in-out;
                 }
             }
 
             &-answer {
                 max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease-in-out;
-                margin: 0 0 10px 0;
+                overflow: hidden;   
+                transition: max-height 0.2s ease-in-out;
+                margin: 10px 30px 0 0;
+
+                &-text {
+                    font-weight: 500;
+                    font-size: 1.25rem;
+                    color: #333333;
+                    text-align: left;
+                    margin-bottom: 10px;
+                    // Tablet
+                    @media (min-width:768px) {
+                        font-size: 1.5rem;
+                    }
+                    // Desktop
+                    @media (min-width:1200px) {
+                        font-size: 1.75rem;
+                    }
+                }
             }
         }
     }
