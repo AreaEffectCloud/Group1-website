@@ -70,11 +70,13 @@ hr {
   padding: 50px 10px;
 }
 #hero h1 {
+  font-size: clamp(4rem, 8vw, 5rem);
+  word-break: keep-all;
+  font-size: 5rem;
+  font-weight: 700;
   display: block;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 5rem;
-  font-weight: 700;
   position: relative;
   color: white;
 }
@@ -141,7 +143,7 @@ hr {
 }
 
 /* ====== End About Section ====== */
-/* ====== second Section ====== */
+/* ====== Study Section ====== */
 #study .study {
   flex-direction: column;
   margin: 70px auto;
@@ -162,11 +164,11 @@ hr {
   box-shadow: 7.5px 7.5px 5px rgba(0, 0, 0, 0.1725490196);
   border-radius: 10px;
   padding: 20px 10px;
-  margin: 20px;
+  margin: 40px 20px;
 }
 @media (max-width: 600px) {
   #study .study-bottom {
-    margin: 40px 20px;
+    margin: 20px;
   }
 }
 #study .study-item {
@@ -175,7 +177,12 @@ hr {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0 50px 20px 50px;
+  padding: 0 0 20px 0;
+}
+@media (min-width: 600px) {
+  #study .study-item {
+    padding: 0 50px 20px 50px;
+  }
 }
 #study .study-item-contents {
   width: 100%;
@@ -193,13 +200,7 @@ hr {
   text-align: left;
 }
 
-/* ====== end second Section ====== */
-/* ====== third Section ====== */
-/* ====== end third Section ====== */
-/* ====== fourth Section ====== */
-/* ====== end fourth Section ====== */
-/* ====== fifth Section ====== */
-/* ====== end fifth Section ====== */
+/* ====== end Study Section ====== */
 /* ====== Footer====== */
 footer {
   padding: 25px 0;

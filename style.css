@@ -20,6 +20,19 @@ img {
   height: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 7.5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(81, 81, 81, 0.259);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -124,30 +137,38 @@ header .hamburger {
   justify-content: flex-start;
 }
 #hero .hero-title {
-  padding: 0 20px;
+  margin: 0 30px;
+  position: relative;
 }
-@media (min-width: 1200px) {
+@media (max-width: 667px) {
   #hero .hero-title {
-    padding: 0 40px;
+    margin: 0 0 0 30px;
+  }
+}
+@media (max-width: 1300px) {
+  #hero .hero-title {
+    top: -70px;
   }
 }
 #hero h1 {
-  font-size: clamp(4rem, 8vw, 5rem);
+  font-size: clamp(4.2rem, 8vw, 5rem);
   word-break: keep-all;
   font-weight: 900;
   text-align: left;
-  position: relative;
+  color: black;
+  text-shadow: 1px 4px 3px #fff;
   display: block;
   width: -moz-fit-content;
   width: fit-content;
-  color: black;
-  text-shadow: 1px 4px 3px #fff;
 }
 
 /* ====== End Hero Section ====== */
 /* ====== About Section ====== */
 #about {
   background: #fff;
+}
+#about .about {
+  padding: 70px 0;
 }
 #about .about-top {
   max-width: 500px;
@@ -205,7 +226,7 @@ header .hamburger {
 /* ====== Article Section ====== */
 #article .article {
   flex-direction: column;
-  margin: 70px auto;
+  margin: 70px 0;
 }
 #article .article-top {
   max-width: 500px;
