@@ -122,7 +122,7 @@ hr {
             flex-wrap: wrap;
             justify-content: center;
             max-width: 700px;
-            margin: 70px 0;
+            margin-top: 70px;
             &-description {
                 padding: 10px 20px 0 20px;
                 margin-bottom: 25px;
@@ -168,9 +168,6 @@ hr {
                 &-img {
                     margin-bottom: 10px;
                     cursor: pointer;
-                    // img {
-                    //     max-width: 100%;
-                    // }
                 }
 
                 h3 {

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap');
 
 $bg-white : #fff;
-$bg-gray : #eee;
+$bg-gray : #f8f8f8;
 $bg-footer : #444;
 $box-shadow : #0000002c;
 
@@ -39,7 +39,7 @@ img {
 
 hr {
     border: none;
-    border-top: 5px double black; //???
+    border-top: 5px double black;
     width: 70vw;
     margin-bottom: 20px;
 }
@@ -124,51 +124,6 @@ hr {
                 margin-bottom: 25px;
             }
         }
-        &-bottom {
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            margin: 20px;
-            
-            @media (min-width:768px) {
-                display: flex;
-                flex-wrap: wrap;
-            }
-        }
-        &-img {
-            margin: 0 auto;
-            margin-bottom: 10px;
-            @media (min-width:640px) {
-                width: 80%;
-            }
-            @media (min-width:601px) {
-                width: 70%;
-            }
-            // Tablet
-            @media (min-width:768px) {
-                width: 50%;
-            }
-            // Desktop
-            @media (min-width:1200px) {
-                width: 40%;
-            }
-        }
-        &-text {
-            text-align: left;
-            text-indent: 1rem;
-            font-size: 1.5rem;
-            font-weight: 500;
-            // Tablet
-            @media (min-width:768px) {
-                font-size: 1.75rem;
-                padding: 20px;
-                width: 50%;
-            }
-            // Desktop
-            @media (min-width:1200px) {
-                font-size: 2rem;
-            }
-        }
     }
 }
 /* ====== End About Section ====== */
@@ -222,7 +177,7 @@ hr {
                 width: 100%;
                 height: auto;
                 cursor: pointer;
-            }   
+            }
         }
     }
 }
