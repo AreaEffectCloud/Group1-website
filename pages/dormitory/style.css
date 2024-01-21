@@ -1,24 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap");
-#faq .faq, #about .about {
-  padding: 100px 20px;
+#faq .faq, #event .event, #facility .facility, #schedule .schedule, #about .about {
+  padding: 45px 20px;
 }
 @media (min-width: 768px) {
-  #faq .faq, #about .about {
-    padding: 80px 30px;
+  #faq .faq, #event .event, #facility .facility, #schedule .schedule, #about .about {
+    padding: 50px 30px;
   }
 }
 
-#faq .faq-item-contents-text, #about .about-text {
+#faq .faq-item-contents-text, #facility .facility-bottom {
   text-align: left;
   font-size: 1.5rem;
 }
 @media (min-width: 768px) {
-  #faq .faq-item-contents-text, #about .about-text {
+  #faq .faq-item-contents-text, #facility .facility-bottom {
     font-size: 1.75rem;
   }
 }
 @media (min-width: 1200px) {
-  #faq .faq-item-contents-text, #about .about-text {
+  #faq .faq-item-contents-text, #facility .facility-bottom {
     font-size: 2rem;
   }
 }
@@ -32,7 +32,7 @@
 html {
   font-size: 10px;
   font-family: "Noto Sans JP", sans-serif;
-  background-color: #eee;
+  background-color: #f8f8f8;
   scroll-behavior: smooth;
 }
 
@@ -45,8 +45,16 @@ img {
   height: 100%;
 }
 
+hr {
+  border: none;
+  border-top: 5px double black;
+  width: 70vw;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+
 .container {
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -65,8 +73,8 @@ img {
 .section-title-description {
   font-size: 2rem;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 25px;
+  text-indent: 1rem;
+  text-align: left;
 }
 
 /* ===== Header ===== */
@@ -96,9 +104,6 @@ img {
   padding: 0 50px;
   justify-content: flex-start;
 }
-#hero .container {
-  min-height: 50vh;
-}
 #hero h1 {
   display: block;
   width: -moz-fit-content;
@@ -116,50 +121,201 @@ img {
   background: #fff;
 }
 #about .about-top {
-  max-width: 500px;
-}
-#about .about-bottom {
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-@media (min-width: 768px) {
-  #about .about-bottom {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-#about .about-img {
-  margin: 0 auto;
-  margin-bottom: 10px;
-}
-@media (min-width: 601px) {
-  #about .about-img {
-    width: 70%;
-  }
-}
-@media (min-width: 768px) {
-  #about .about-img {
-    width: 50%;
-  }
-}
-@media (min-width: 1200px) {
-  #about .about-img {
-    width: 40%;
-  }
-}
-#about .about-text {
-  font-weight: 500;
-  text-indent: 1rem;
-}
-@media (min-width: 768px) {
-  #about .about-text {
-    padding: 20px;
-    width: 50%;
-  }
+  max-width: 700px;
+  padding: 10px 17px 0;
+  margin-bottom: 25px;
 }
 
 /* ====== End About Section ====== */
+/* ====== Time-Schedule Section ====== */
+#schedule .schedule-top {
+  max-width: 700px;
+  padding: 10px 17px 0;
+  margin-bottom: 25px;
+}
+#schedule .schedule-bottom {
+  max-width: 1000px;
+  text-align: left;
+  font-size: 1.5rem;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  #schedule .schedule-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  #schedule .schedule-bottom {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1200px) {
+  #schedule .schedule-bottom {
+    font-size: 2rem;
+  }
+}
+#schedule .schedule-bottom-left {
+  flex: 1;
+  padding-left: 10px;
+}
+@media (max-width: 600px) {
+  #schedule .schedule-bottom-left {
+    padding: 20px 40px;
+  }
+}
+#schedule .schedule-bottom-right {
+  flex: 1;
+  padding: 0 20px;
+}
+#schedule .schedule-bottom-right p {
+  text-indent: 1rem;
+}
+#schedule .schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#schedule .schedule-table th, #schedule .schedule-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+#schedule .schedule-table th {
+  background-color: #f2f2f2;
+}
+#schedule .schedule-table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* ====== End Time-Schedule Section ====== */
+/* ====== Facility Section ====== */
+#facility .facility-top {
+  max-width: 700px;
+  padding: 10px 17px 0;
+  margin-bottom: 25px;
+}
+#facility .facility-bottom {
+  max-width: 1000px;
+  margin: 5px 0;
+}
+#facility .facility-dormitory {
+  padding: 10px 0;
+}
+#facility .facility-dormitory-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.03);
+  margin-bottom: 20px;
+  padding: 24px 30px 14px;
+}
+@media (max-width: 444px) {
+  #facility .facility-dormitory-item {
+    padding: 24px 15px 14px;
+  }
+}
+#facility .facility-dormitory-item-title {
+  font-weight: 700;
+}
+#facility .facility-dormitory-item-description {
+  text-indent: 1rem;
+  margin: 10px 30px 10px 0;
+}
+#facility .facility-list {
+  list-style-type: none;
+  letter-spacing: -0.4em;
+  margin: 30px auto;
+}
+@media (min-width: 600px) {
+  #facility .facility-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+#facility .facility-item {
+  display: inline-block;
+  width: 33.333%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  letter-spacing: normal;
+  vertical-align: top;
+}
+@media (max-width: 480px) {
+  #facility .facility-item {
+    width: 50%;
+  }
+}
+#facility .facility-item img {
+  height: auto;
+}
+#facility .facility-item p {
+  font-weight: 500;
+  text-align: center;
+  padding-left: 5px;
+}
+
+/* ====== End Facility Section ====== */
+/* ====== Events Section ====== */
+#event .event {
+  flex-direction: column;
+}
+#event .event-top {
+  max-width: 700px;
+  padding: 10px 17px 0;
+}
+#event .event-bottom {
+  max-width: 1000px;
+  margin: 5px 0;
+}
+#event .event-bottom-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 15px;
+}
+#event .event-bottom-item-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+#event .event-bottom-item-description {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-indent: 1rem;
+  text-align: left;
+}
+#event .event-list {
+  list-style-type: none;
+  letter-spacing: -0.4em;
+  margin: 30px auto;
+}
+@media (min-width: 600px) {
+  #event .event-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+#event .event-item {
+  display: inline-block;
+  width: 33.333%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  letter-spacing: normal;
+  vertical-align: top;
+}
+@media (max-width: 480px) {
+  #event .event-item {
+    width: 50%;
+  }
+}
+#event .event-item img {
+  height: auto;
+}
+
+/* ====== End Events Section ====== */
 /* ====== FAQ Section ====== */
 #faq {
   background: #f8f8f8;
@@ -172,7 +328,7 @@ img {
 }
 #faq .faq-bottom {
   max-width: 1000px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 #faq .faq-item {
   background-color: #fff;
