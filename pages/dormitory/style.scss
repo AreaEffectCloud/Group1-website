@@ -6,10 +6,9 @@ $bg-footer : #444;
 $box-shadow : rgba(0, 0, 0, 0.03);
 
 %section-padding {
-    padding: 100px 20px;
-
+    padding: 45px 20px;
     @media (min-width: 768px) {
-        padding: 80px 30px;
+        padding: 50px 30px;
     }
 }
 
@@ -35,7 +34,7 @@ $box-shadow : rgba(0, 0, 0, 0.03);
 html {
     font-size: 10px;
     font-family: 'Noto Sans JP', sans-serif;
-    background-color: #eee;
+    background-color: $bg-gray;
     scroll-behavior: smooth;
 }
 
@@ -48,9 +47,17 @@ img {
     height: 100%;
 }
 
+hr {
+    border: none;
+    border-top: 5px double black;
+    width: 70vw;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
 
 .container {
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -69,8 +76,8 @@ img {
     &-description {
         font-size: 2rem;
         font-weight: 700;
-        text-align: center;
-        margin-bottom: 25px;
+        text-indent: 1rem;
+        text-align: left;
     }
 }
 
@@ -105,10 +112,6 @@ img {
         padding: 0 50px;
         justify-content: flex-start;
     }
-
-    .container {
-        min-height: 50vh;
-    }
     
     h1 {
         display: block;
@@ -129,49 +132,204 @@ img {
     .about {
         @extend %section-padding;
         &-top {
-            max-width: 500px;
-        }
-        &-bottom {
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            
-            @media (min-width:768px) {
-                display: flex;
-                flex-wrap: wrap;
-            }
-        }
-
-        &-img {
-            margin: 0 auto;
-            margin-bottom: 10px;
-            
-            @media (min-width:601px) {
-                width: 70%;
-            }
-            // Tablet
-            @media (min-width:768px) {
-                width: 50%;
-            }
-            // Desktop
-            @media (min-width:1200px) {
-                width: 40%;
-            }   
-        }
-
-        &-text {
-            @extend %plain-text;
-            font-weight: 500;
-            text-indent: 1rem;
-            // Tablet
-            @media (min-width:768px) {
-                padding: 20px;
-                width: 50%;
-            }
+            max-width: 700px;
+            padding: 10px 17px 0;
+            margin-bottom: 25px;
         }
     }
 }
 /* ====== End About Section ====== */
+
+
+/* ====== Time-Schedule Section ====== */
+#schedule {
+    .schedule {
+        @extend %section-padding;
+        &-top {
+            max-width: 700px;
+            padding: 10px 17px 0;
+            margin-bottom: 25px;
+        }
+        &-bottom {
+            max-width: 1000px;
+            text-align: left;
+            font-size: 1.5rem;
+            align-items: center;
+
+            @media (min-width:600px) {
+                display: flex;
+                justify-content: space-between;
+            }
+            @media (min-width:768px) {
+                font-size: 1.8rem;
+            }
+            @media (min-width:1200px) {
+                font-size: 2rem;
+            }
+
+            &-left {
+                flex: 1;
+                padding-left: 10px;
+                @media (max-width:600px) {
+                    padding: 20px 40px;
+                }
+            }
+            &-right {
+                flex: 1;
+                padding: 0 20px;
+                p {
+                    text-indent: 1rem
+                }
+            }
+        }
+        &-table {
+            width: 100%;
+            border-collapse: collapse;
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            tr:nth-child(odd) {
+                background-color: $bg-white;
+            }
+        }
+    }
+}
+/* ====== End Time-Schedule Section ====== */
+
+
+/* ====== Facility Section ====== */
+#facility {
+    .facility {
+        @extend %section-padding;
+        &-top {
+            max-width: 700px;
+            padding: 10px 17px 0;
+            margin-bottom: 25px;
+        }
+        &-bottom {
+            max-width: 1000px;
+            margin: 5px 0;
+            @extend %plain-text;
+        }
+        &-dormitory {
+            padding: 10px 0;
+            &-item {
+                background-color: $bg-white;
+                border-radius: 10px;
+                box-shadow: 0 3px 7px 0 $box-shadow;
+                margin-bottom: 20px;
+                padding: 24px 30px 14px;
+
+                @media (max-width:444px) {
+                    padding: 24px 15px 14px;
+                }
+                &-title {
+                    font-weight: 700;
+                }
+                &-description {
+                    text-indent: 1rem;
+                    margin: 10px 30px 10px 0;
+                }
+            }
+        }
+        &-list {
+            list-style-type: none;
+            letter-spacing: -.4em;
+            margin: 30px auto;
+            @media (min-width:600px) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        &-item {
+            display: inline-block;
+            width: 33.333%;
+            padding: 0 10px;
+            margin-bottom: 20px;
+            letter-spacing: normal;
+            vertical-align: top;
+            @media (max-width: 480px) {
+                width: 50%;
+            }
+            img {
+                height: auto;
+            }
+            p {
+                font-weight: 500;
+                text-align: center;
+                padding-left: 5px;
+            }
+        }
+    }
+}
+/* ====== End Facility Section ====== */
+
+
+/* ====== Events Section ====== */
+#event {
+    .event {
+        @extend %section-padding;
+        flex-direction: column;
+        &-top {
+            max-width: 700px;
+            padding: 10px 17px 0;
+        }
+        &-bottom {
+            max-width: 1000px;
+            margin: 5px 0;
+            &-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 15px;
+                &-title {
+                    font-size: 3.5rem;
+                    font-weight: 900;
+                }
+                &-description {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    text-indent: 1rem;
+                    text-align: left;
+                }
+            }
+        }
+        &-list {
+            list-style-type: none;
+            letter-spacing: -.4em;
+            margin: 30px auto;
+            @media (min-width:600px) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        &-item {
+            display: inline-block;
+            width: 33.333%;
+            padding: 0 10px;
+            margin-bottom: 20px;
+            letter-spacing: normal;
+            vertical-align: top;
+            @media (max-width: 480px) {
+                width: 50%;
+            }
+            img {
+                height: auto;
+            }
+        }
+    }
+}
+/* ====== End Events Section ====== */
 
 
 /* ====== FAQ Section ====== */
@@ -185,7 +343,7 @@ img {
         }
         &-bottom {
             max-width: 1000px;
-            margin-top: 10px;
+            margin-top: 20px;
         }
         &-item {
             background-color: $bg-white;

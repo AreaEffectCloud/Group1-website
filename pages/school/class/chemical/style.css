@@ -107,7 +107,7 @@ hr {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 700px;
-  margin: 70px 0;
+  margin-top: 70px;
 }
 #about .about-top-description {
   padding: 10px 20px 0 20px;
