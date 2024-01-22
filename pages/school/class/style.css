@@ -44,11 +44,9 @@ img {
   margin-bottom: 25px;
 }
 
-/* ===== Header ===== */
-/* ===== End Header ===== */
 /* ====== Hero Section ====== */
 #hero {
-  background-image: url(./images/class.jpg);
+  background-image: url(./images/class_top.jpg);
   background-size: cover;
   background-position: top center;
   position: relative;

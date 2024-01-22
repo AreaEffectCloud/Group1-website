@@ -30,19 +30,6 @@ img {
     height: 100%;
 }
 
-::-webkit-scrollbar {
-    width: 7.5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(255, 0, 0, 0.263);
-    border-radius: 999px;
-}
-
-::-webkit-scrollbar-track {
-    background: #eee;
-}
-
 .container {
     min-height: 100vh;
     display: flex;
@@ -68,58 +55,6 @@ img {
     }
 }
 
-/* ===== Header =====*/
-header {
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-image: linear-gradient(45deg, $primary-color, $secondary-color);
-
-    .header {
-        min-height: 8vh;
-        background-color: linear-gradient(45deg, $primary-color, $secondary-color);
-        transition: 0.3 ease background-color;
-    }    
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        // For Desktop
-        ul {
-            list-style-type: none; //携帯用の部分に記載しておく
-            position: initial;
-            display: block;
-            width: fit-content;
-            li {
-                display: inline-block;
-                &:hover a {
-                    color: crimson;
-                }
-                a {
-                    font-size: 1.8rem;
-                    color: white;
-                    &::after {
-                       display: none;
-                    }
-                }
-            }
-        }
-    }
-
-    .hamburger {
-        display: none;
-        height: 60px;
-        width: 60px;
-        border: 3px solid #fff;
-    }
-}
-/* ===== End Header =====*/
-
 /* ====== Hero Section ====== */
 #hero {
     background-image: url(./images/hero.jpg);
@@ -130,7 +65,6 @@ header {
     @media (max-width:667px) {
         background-image: url(./images/hero_long.jpg);
     }
-    
     &::after {
         content: '';
         position: absolute;
@@ -142,12 +76,10 @@ header {
         opacity: 0;
         z-index: -1;
     }
-    
     .hero {
         max-width: 1200px;
         margin: 0 auto;
         justify-content: flex-start;
-
         &-title {
             margin: 0 30px;
             position: relative;
@@ -159,22 +91,15 @@ header {
             }
         }
     }
-    
     h1 {
         font-size: clamp(4.2rem, 8vw, 5rem);
         word-break: keep-all;
         font-weight: 900;
         text-align: left;
-
         color: black;
         text-shadow: 1px 4px 3px $bg-white;
-        // color:rgba(0,0,0,.0);
-        // -webkit-text-stroke: 1px #FFF;
-        
         display: block;
         width: fit-content;
-        // animation: title_cover 2s ease forwards;
-        // animation-delay: .1s;
     }
 }
 /* ====== End Hero Section ====== */
@@ -193,7 +118,6 @@ header {
             align-items: center;
             justify-content: center;
             margin: 20px;
-
             @media (min-width:768px) {
                 display: flex;
                 flex-wrap: wrap;
@@ -206,27 +130,24 @@ header {
             @media (min-width:601px) {
                 width: 70%;
             }
-            // Tablet
             @media (min-width:768px) {
                 width: 50%;
             }
-            // Desktop
             @media (min-width:1200px) {
                 width: 40%;
             }
         }
 
         &-text {
-            text-align: left;
             font-size: 1.5rem;
             font-weight: 500;
-            // Tablet
+            text-align: left;
+            text-indent: 1rem;
             @media (min-width:768px) {
                 font-size: 1.75rem;
                 padding: 20px;
                 width: 50%;
             }
-            // Desktop
             @media (min-width:1200px) {
                 font-size: 2rem;
             }
@@ -250,16 +171,14 @@ header {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            // Tablet
-            @media (min-width:768px) {
-                flex-basis: 45%;
-                margin: 2.5%;
-            }
-            // Desktop
-            @media (min-width:1200px) {
-                flex-basis: 22%;
-                margin: 1.5%;
-            }
+            // @media (min-width:768px) {
+            //     flex-basis: 45%;
+            //     margin: 2.5%;
+            // }
+            // @media (min-width:1200px) {
+            //     flex-basis: 70%;
+            //     margin: 1%;
+            // }
         }
 
         &-img {
@@ -267,7 +186,6 @@ header {
             display: flex;
             overflow: hidden;
             position: relative;
-
             img {
                 object-fit: cover;
                 transition: .3s ease;
@@ -283,7 +201,6 @@ header {
             border-radius: 13px;
             padding-bottom: 20px;
             margin: 3%;
-
             background-size: cover;
             box-shadow: 0 0 18px 0 $box-shadow;
             transition: 0.3s ease box-shadow;
@@ -292,29 +209,32 @@ header {
             @media (min-width:600px) {
                 flex-basis: 65%;
             }
-            // Tablet
             @media (min-width:768px) {
                 flex-basis: 45%;
                 margin: 2.5%;
             }
-            // Desktop
+            @media (min-width:990px) {
+                flex-basis: 40%;
+                margin: 2.0%;
+            }
             @media (min-width:1200px) {
-                flex-basis: 22%;
+                flex-basis: 35%;
                 margin: 1.5%;
             }
-
+            @media (min-width:1300px) {
+                flex-basis: 30%;
+                margin: 1.0%;
+            }
             h2 {
                 padding: 5px 20px;
                 font-size: 2.4rem;
                 font-weight: 700;
             }
-
             span {
                 font-size: 1.8rem;
                 font-weight: 700;
                 padding: 0 2px;
             }
-
             p {
                 padding: 0 20px;
                 font-size: 1.6rem;
@@ -324,7 +244,6 @@ header {
             }
             &:hover {
                 box-shadow: 0px 0px 5px 0px $box-shadow;
-                // 写真を拡大
                 .article-img img {
                     transform: scale(1.1);
                 }
@@ -349,21 +268,3 @@ footer {
     }
 }
 /* ====== End Footer ====== */
-
-
-// @keyframes title_cover {
-//     100% {
-//         color: black;
-//     }
-// }
-
-// @keyframes title_cover_box {
-//     50% {
-//         width: 100%;
-//         left: 0;
-//     }
-//     100% {
-//         width: 0;
-//         left: 100%;
-//     }
-// }
