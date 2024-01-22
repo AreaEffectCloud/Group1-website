@@ -117,7 +117,7 @@ img {
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            margin: 20px;
+            margin: 30px;
             @media (min-width:768px) {
                 display: flex;
                 flex-wrap: wrap;
@@ -139,14 +139,20 @@ img {
         }
 
         &-text {
-            font-size: 1.5rem;
+            font-size: 1.65rem;
             font-weight: 500;
             text-align: left;
             text-indent: 1rem;
             @media (min-width:768px) {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
                 padding: 20px;
                 width: 50%;
+            }
+            @media (min-width:880px) {
+                font-size: 1.75rem;
+            }
+            @media (min-width:1065px) {
+                font-size: 1.9rem;
             }
             @media (min-width:1200px) {
                 font-size: 2rem;
@@ -171,14 +177,6 @@ img {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            // @media (min-width:768px) {
-            //     flex-basis: 45%;
-            //     margin: 2.5%;
-            // }
-            // @media (min-width:1200px) {
-            //     flex-basis: 70%;
-            //     margin: 1%;
-            // }
         }
 
         &-img {
@@ -264,7 +262,6 @@ footer {
         color: $bg-white;
         font-size: 14px;
         line-height: 1;
-        // border-top: 1px solid $bg-gray;
     }
 }
 /* ====== End Footer ====== */
