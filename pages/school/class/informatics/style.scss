@@ -5,6 +5,17 @@ $bg-gray : #eee;
 $bg-footer : #444;
 $box-shadow : #0000002c;
 
+%section-padding {
+    padding: 100px 20%;
+
+    @media (max-width: 1280px) {
+        padding: 80px 10%;
+    }
+    @media (max-width: 768px) {
+        padding: 80px 5%;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -34,7 +45,7 @@ hr {
 }
 
 .container {
-    // min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -58,11 +69,6 @@ hr {
     }
 }
 
-
-/* ===== Header ===== */
-/* ===== End Header ===== */
-
-
 /* ====== Hero Section ====== */
 #hero {
     .hero {
@@ -71,18 +77,11 @@ hr {
         padding: 0 50px;
         justify-content: flex-start;
     }
-
-    .container {
-        min-height: 50vh;
-    }
-
     .titlebox {
         background: #00bfff;
         padding: 50px 10px;
     }
-
     h1 {
-        // font-size: 5rem;
         font-size: clamp(4rem, 8vw, 5rem);
         word-break: keep-all;
         font-weight: 700;
@@ -91,11 +90,9 @@ hr {
         width: fit-content;
         position: relative;
     }
-
     .top-cover {
         z-index: -1;
         overflow: hidden;
-
         img {
             width: 100%;
             position: absolute;
@@ -115,47 +112,37 @@ hr {
 #about {
     background: $bg-white;
     .about {
+        @extend %section-padding;
         flex-direction: column;
-
         &-top {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             max-width: 700px;
-            margin: 70px 0;
             &-description {
                 padding: 10px 20px 0 20px;
                 margin-bottom: 25px;
             }
         }
-
         &-bottom {
             margin-bottom: 50px;
-            //Tablet & Desktop
             @media (min-width:600px) {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
             }
-
             &-item {
                 padding: 10px 20px;
                 margin-bottom: 20px;
                 flex-basis: 25%;
-                
                 @media (min-width:600px) {
                     padding: 10px;
                 }
-
                 &-img {
                     margin-bottom: 10px;
                     cursor: pointer;
-                    // img {
-                    //     max-width: 100%;
-                    // }
                 }
-
                 h3 {
                     font-size: 1.8rem;
                     font-weight: 700;
@@ -180,7 +167,6 @@ hr {
         margin: 70px auto;
         &-top {
             max-width: 700px;
-            //Tablet & Desktop
             @media (min-width:789px) {
                 display: flex;
                 flex-wrap: wrap;
@@ -194,7 +180,6 @@ hr {
             border-radius: 10px;
             padding: 20px 10px;
             margin: 40px 20px;
-            //Tablet & Desktop
             @media (min-width:600px) {
                 margin: 20px;
             }
@@ -206,11 +191,9 @@ hr {
             justify-content: center;
             flex-wrap: wrap;
             padding: 0 0 20px 0;
-            //Tablet & Desktop
             @media (min-width:600px) {
                 padding: 0 50px 20px 50px;
             }
-
             &-contents {
                 width: 100%;
                 text-align: left;
@@ -237,7 +220,6 @@ footer {
     padding: 25px 0;
     text-align: center;
     background: $bg-footer;
-
     small {
         color: $bg-white;
         font-size: 14px;

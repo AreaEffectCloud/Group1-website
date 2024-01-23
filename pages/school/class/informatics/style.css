@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap");
+#about .about {
+  padding: 100px 20%;
+}
+@media (max-width: 1280px) {
+  #about .about {
+    padding: 80px 10%;
+  }
+}
+@media (max-width: 768px) {
+  #about .about {
+    padding: 80px 5%;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -28,6 +42,7 @@ hr {
 }
 
 .container {
+  min-height: 50vh;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -50,17 +65,12 @@ hr {
   text-align: left;
 }
 
-/* ===== Header ===== */
-/* ===== End Header ===== */
 /* ====== Hero Section ====== */
 #hero .hero {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 50px;
   justify-content: flex-start;
-}
-#hero .container {
-  min-height: 50vh;
 }
 #hero .titlebox {
   background: #00bfff;
@@ -105,7 +115,6 @@ hr {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 700px;
-  margin: 70px 0;
 }
 #about .about-top-description {
   padding: 10px 20px 0 20px;
