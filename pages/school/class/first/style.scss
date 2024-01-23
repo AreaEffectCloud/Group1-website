@@ -108,54 +108,49 @@ img {
     background: $bg-white;
     .about {
         padding: 70px 0;
-        // Section Title
         &-top {
             max-width: 500px;
         }
-        // Description
         &-bottom {
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            margin: 20px;
-            
+            margin: 30px;
             @media (min-width:768px) {
                 display: flex;
                 flex-wrap: wrap;
             }
         }
-
         &-img {
             margin: 0 auto;
             margin-bottom: 10px;
-            @media (min-width:640px) {
-                width: 80%;
-            }
             @media (min-width:601px) {
                 width: 70%;
             }
-            // Tablet
             @media (min-width:768px) {
                 width: 50%;
             }
-            // Desktop
             @media (min-width:1200px) {
                 width: 40%;
             }
         }
 
         &-text {
+            font-size: 1.65rem;
+            font-weight: 500;
             text-align: left;
             text-indent: 1rem;
-            font-size: 1.5rem;
-            font-weight: 500;
-            // Tablet
             @media (min-width:768px) {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
                 padding: 20px;
                 width: 50%;
             }
-            // Desktop
+            @media (min-width:880px) {
+                font-size: 1.75rem;
+            }
+            @media (min-width:1065px) {
+                font-size: 1.9rem;
+            }
             @media (min-width:1200px) {
                 font-size: 2rem;
             }
@@ -174,7 +169,6 @@ img {
             max-width: 700px;
             display: flex;
             flex-direction: column;
-            //Tablet & Desktop
             @media (min-width:789px) {
                 flex-wrap: wrap;
                 justify-content: center;
@@ -189,14 +183,11 @@ img {
             border-radius: 10px;
             padding: 20px 10px;
             margin: 20px;
-
-            //Tablet & Desktop
             @media (min-width:600px) {
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
             &-item {
                 flex-basis: 30%;
                 padding: 10px 20px;
@@ -211,7 +202,6 @@ img {
                     }
                 }
             }
-
             &-text {
                 padding: 0 20px 30px 20px;
                 max-width: 900px;
