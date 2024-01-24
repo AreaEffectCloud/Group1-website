@@ -79,7 +79,7 @@ hr {
 
 /* ====== Hero Section ====== */
 #hero {
-  background-image: url(./images/dormitory-top.jpg);
+  background-image: url(../../images/dormitory-top.jpg);
   background-size: cover;
   background-position: top center;
   position: relative;
