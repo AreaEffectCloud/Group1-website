@@ -69,7 +69,6 @@ hr {
     }
 }
 
-
 /* ====== Hero Section ====== */
 #hero {
     .hero {
@@ -85,12 +84,11 @@ hr {
     h1 {
         font-size: clamp(4rem, 8vw, 5rem);
         word-break: keep-all;
-        font-size: 5rem;
         font-weight: 700;
+        color: white;
         display: block;
         width: fit-content;
         position: relative;
-        color: white;
     }
     .top-cover {
         z-index: -1;
@@ -138,6 +136,9 @@ hr {
                 padding: 10px 20px;
                 margin-bottom: 20px;
                 flex-basis: 25%;
+                @media (min-width:600px) {
+                    padding: 10px;
+                }
                 &-img {
                     margin-bottom: 10px;
                     cursor: pointer;

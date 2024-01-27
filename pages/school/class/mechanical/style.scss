@@ -87,12 +87,11 @@ hr {
     h1 {
         font-size: clamp(4rem, 8vw, 5rem);
         word-break: keep-all;
-        font-size: 5rem;
         font-weight: 700;
+        color: white;
         display: block;
         width: fit-content;
         position: relative;
-        color: white;
     }
     .top-cover {
         z-index: -1;
@@ -136,6 +135,9 @@ hr {
                 padding: 10px 20px;
                 margin-bottom: 20px;
                 flex-basis: 25%;
+                @media (min-width:600px) {
+                    padding: 10px;
+                }
                 &-img {
                     margin-bottom: 10px;
                     cursor: pointer;
@@ -164,7 +166,6 @@ hr {
         margin: 70px auto;
         &-top {
             max-width: 700px;
-            //Tablet & Desktop
             @media (min-width:789px) {
                 display: flex;
                 flex-wrap: wrap;
@@ -178,7 +179,6 @@ hr {
             border-radius: 10px;
             padding: 20px 10px;
             margin: 40px 20px;
-            //Tablet & Desktop
             @media (max-width:600px) {
                 margin: 20px;
             }
@@ -190,11 +190,9 @@ hr {
             justify-content: center;
             flex-wrap: wrap;
             padding: 0 0 20px 0;
-            //Tablet & Desktop
             @media (min-width:600px) {
                 padding: 0 50px 20px 50px;
             }
-
             &-contents {
                 width: 100%;
                 text-align: left;
