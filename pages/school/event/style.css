@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap");
+#gallery .gallery, #about .about {
+  padding: 100px 20%;
+}
+@media (max-width: 1280px) {
+  #gallery .gallery, #about .about {
+    padding: 80px 10%;
+  }
+}
+@media (max-width: 768px) {
+  #gallery .gallery, #about .about {
+    padding: 80px 5%;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f8f8f8;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+hr {
+  border: none;
+  border-top: 5px double black;
+  width: 70vw;
+  margin-bottom: 20px;
+}
+
+.container {
+  min-height: 50vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  letter-spacing: 0.15rem;
+}
+.section-title-description {
+  font-size: 2rem;
+  font-weight: 700;
+  text-indent: 1rem;
+  text-align: left;
+}
+
+/* ====== Hero Section ====== */
+#hero .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+#hero h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: black;
+  text-shadow: 1px 4px 3px #fff;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+#hero .top-cover {
+  z-index: -1;
+  overflow: hidden;
+}
+#hero .top-cover img {
+  position: absolute;
+  top: -20%;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 550px) {
+  #hero .top-cover img {
+    top: -45%;
+    bottom: -30%;
+    left: -50%;
+    right: -50%;
+  }
+}
+
+/* ====== End Hero Section ====== */
+/* ====== About Section ====== */
+#about {
+  background: #fff;
+}
+#about .about-top {
+  max-width: 700px;
+}
+#about .about-top-description {
+  padding: 10px 17px 0;
+  margin-bottom: 25px;
+}
+
+/* ====== End About Section ====== */
+/* ====== Gallery Section ====== */
+#gallery .container {
+  min-height: 100vh;
+}
+#gallery .gallery {
+  flex-direction: column;
+}
+#gallery .gallery-top {
+  max-width: 1000px;
+}
+#gallery .gallery-bottom {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  #gallery .gallery-bottom {
+    flex-basis: 45%;
+    margin: 2.5%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #gallery .gallery-bottom {
+    flex-basis: 22%;
+    margin: 1.5%;
+  }
+}
+#gallery .gallery-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+#gallery .gallery-item {
+  width: calc(50% - 10px);
+}
+#gallery .gallery-item:not(#gallery .gallery-item:nth-child(-n+2)) {
+  margin-top: 20px;
+}
+#gallery .gallery-item:nth-child(even) {
+  margin-left: 20px;
+}
+#gallery .gallery-item img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* ====== End Gallery Section ====== */
+/* ====== Footer====== */
+footer {
+  padding: 25px 0;
+  text-align: center;
+  background: #444;
+}
+footer small {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ====== End Footer ====== *//*# sourceMappingURL=style.css.map */

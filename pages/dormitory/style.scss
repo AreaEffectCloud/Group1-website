@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap');
+
+$bg-white : #fff;
+$bg-gray : #f8f8f8;
+$bg-footer : #444;
+$box-shadow : rgba(0, 0, 0, 0.03);
+
+%section-padding {
+    padding: 45px 20px;
+    @media (min-width: 768px) {
+        padding: 50px 30px;
+    }
+}
+
+%plain-text {
+    text-align: left;
+    font-size: 1.5rem;
+    @media (min-width:768px) {
+        font-size: 1.75rem;
+    }
+    @media (min-width:1200px) {
+        font-size: 2rem;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: $bg-gray;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+hr {
+    border: none;
+    border-top: 5px double black;
+    width: 70vw;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.container {
+    min-height: 50vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: 0.15rem;
+    &-description {
+        font-size: 2rem;
+        font-weight: 700;
+        text-indent: 1rem;
+        text-align: left;
+    }
+}
+
+
+/* ====== Hero Section ====== */
+#hero {
+    background-image: url(../../images/dormitory-top.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $bg-white;
+        opacity: 0;
+        z-index: -1;
+    }
+    .hero {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 50px;
+        justify-content: flex-start;
+    }
+    h1 {
+        display: block;
+        width: fit-content;
+        font-size: 5rem;
+        font-weight: 900;
+        position: relative;
+        color: black;
+        text-shadow: 1px 4px 3px #fff;
+    }
+}
+/* ====== End Hero Section ====== */
+
+
+/* ====== About Section ====== */
+#about {
+    background: $bg-white;
+    .about {
+        @extend %section-padding;
+        &-top {
+            max-width: 700px;
+            padding: 10px 17px 0;
+            margin-bottom: 25px;
+        }
+    }
+}
+/* ====== End About Section ====== */
+
+
+/* ====== Time-Schedule Section ====== */
+#schedule {
+    .schedule {
+        @extend %section-padding;
+        &-top {
+            max-width: 700px;
+            padding: 10px 17px 0;
+            margin-bottom: 25px;
+        }
+        &-bottom {
+            max-width: 1000px;
+            text-align: left;
+            font-size: 1.5rem;
+            align-items: center;
+
+            @media (min-width:600px) {
+                display: flex;
+                justify-content: space-between;
+            }
+            @media (min-width:768px) {
+                font-size: 1.8rem;
+            }
+            @media (min-width:1200px) {
+                font-size: 2rem;
+            }
+
+            &-left {
+                flex: 1;
+                padding-left: 10px;
+                @media (max-width:600px) {
+                    padding: 20px 40px;
+                }
+            }
+            &-right {
+                flex: 1;
+                padding: 0 20px;
+                p {
+                    text-indent: 1rem
+                }
+            }
+        }
+        &-table {
+            width: 100%;
+            border-collapse: collapse;
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            tr:nth-child(odd) {
+                background-color: $bg-white;
+            }
+        }
+    }
+}
+/* ====== End Time-Schedule Section ====== */
+
+
+/* ====== Facility Section ====== */
+#facility {
+    .facility {
+        @extend %section-padding;
+        &-top {
+            max-width: 700px;
+            padding: 10px 17px 0;
+            margin-bottom: 25px;
+        }
+        &-bottom {
+            max-width: 1000px;
+            margin: 5px 0;
+            @extend %plain-text;
+        }
+        &-dormitory {
+            padding: 10px 0;
+            &-item {
+                background-color: $bg-white;
+                border-radius: 10px;
+                box-shadow: 0 3px 7px 0 $box-shadow;
+                margin-bottom: 20px;
+                padding: 24px 30px 14px;
+
+                @media (max-width:444px) {
+                    padding: 24px 15px 14px;
+                }
+                &-title {
+                    font-weight: 700;
+                }
+                &-description {
+                    text-indent: 1rem;
+                    margin: 10px 30px 10px 0;
+                }
+            }
+        }
+        &-list {
+            list-style-type: none;
+            letter-spacing: -.4em;
+            margin: 30px auto;
+            @media (min-width:600px) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        &-item {
+            display: inline-block;
+            width: 33.333%;
+            padding: 0 10px;
+            margin-bottom: 20px;
+            letter-spacing: normal;
+            vertical-align: top;
+            @media (max-width: 480px) {
+                width: 50%;
+            }
+            img {
+                height: auto;
+            }
+            p {
+                font-weight: 500;
+                text-align: center;
+                padding-left: 5px;
+            }
+        }
+    }
+}
+/* ====== End Facility Section ====== */
+
+
+/* ====== Events Section ====== */
+#event {
+    .event {
+        @extend %section-padding;
+        flex-direction: column;
+        &-top {
+            max-width: 700px;
+            padding: 10px 17px 0;
+        }
+        &-bottom {
+            max-width: 1000px;
+            margin: 5px 0;
+            &-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 15px;
+                &-title {
+                    font-size: 3.5rem;
+                    font-weight: 900;
+                }
+                &-description {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    text-indent: 1rem;
+                    text-align: left;
+                }
+            }
+        }
+        &-list {
+            list-style-type: none;
+            letter-spacing: -.4em;
+            margin: 30px auto;
+            @media (min-width:600px) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        &-item {
+            display: inline-block;
+            width: 33.333%;
+            padding: 0 10px;
+            margin-bottom: 20px;
+            letter-spacing: normal;
+            vertical-align: top;
+            @media (max-width: 480px) {
+                width: 50%;
+            }
+            img {
+                height: auto;
+            }
+        }
+    }
+}
+/* ====== End Events Section ====== */
+
+
+/* ====== FAQ Section ====== */
+#faq {
+    background: $bg-gray;
+    .faq {
+        flex-direction: column;
+        @extend %section-padding;
+        &-top {
+            max-width: 500px;
+        }
+        &-bottom {
+            max-width: 1000px;
+            margin-top: 20px;
+        }
+        &-item {
+            background-color: $bg-white;
+            border-radius: 10px;
+            box-shadow: 0 3px 7px 0 $box-shadow;
+            margin-bottom: 20px;
+            padding: 24px 30px 14px;
+            @media (max-width:444px) {
+                padding: 24px 15px 14px;
+            }
+            
+            &-contents {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+
+                &-text {
+                    @extend %plain-text;
+                    font-weight: 700;
+                    color: rgb(0, 0, 0);
+                    transition: color 0.2s ease-in-out;
+                }
+
+                &-img {
+                    padding-top: 7px;
+                    transform-origin: center;
+                    transform: rotate(0);
+                    transition: transform 0.2s ease-in-out;
+                }
+            }
+
+            &-answer {
+                max-height: 0;
+                overflow: hidden;   
+                transition: max-height 0.2s ease-in-out;
+                margin: 10px 30px 0 0;
+
+                &-text {
+                    font-weight: 500;
+                    font-size: 1.25rem;
+                    color: #333333;
+                    text-align: left;
+                    margin-bottom: 10px;
+                    // Tablet
+                    @media (min-width:768px) {
+                        font-size: 1.5rem;
+                    }
+                    // Desktop
+                    @media (min-width:1200px) {
+                        font-size: 1.75rem;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ====== End FAQ Section ====== */
+
+
+/* ====== Footer====== */
+footer {
+    padding: 25px 0;
+    text-align: center;
+    background: $bg-footer;
+
+    small {
+        color: #fff;
+        font-size: 14px;
+        line-height: 1;
+    }
+}
+/* ====== End Footer ====== */

@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap");
+#about .about {
+  padding: 100px 20%;
+}
+@media (max-width: 1280px) {
+  #about .about {
+    padding: 80px 10%;
+  }
+}
+@media (max-width: 768px) {
+  #about .about {
+    padding: 80px 5%;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+hr {
+  border: none;
+  border-top: 5px double black;
+  width: 70vw;
+  margin-bottom: 20px;
+}
+
+.container {
+  min-height: 50vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  letter-spacing: 0.15rem;
+}
+.section-title-description {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  text-indent: 1rem;
+}
+
+/* ====== Hero Section ====== */
+#hero {
+  background-image: url(./images/basketball.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.5;
+  z-index: -1;
+}
+#hero .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+#hero h1 {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 5rem;
+  font-weight: 900;
+  position: relative;
+  color: black;
+  text-shadow: 1px 4px 3px #fff;
+}
+
+/* ====== End Hero Section ====== */
+/* ====== About Section ====== */
+#about {
+  background: #fff;
+}
+#about .about-top {
+  max-width: 700px;
+}
+#about .about-top-description {
+  padding: 10px 20px 0 20px;
+  margin-bottom: 25px;
+}
+
+/* ====== End About Section ====== */
+/* ====== Sports club Section ====== */
+#sports .sports {
+  flex-direction: column;
+  margin: 70px auto;
+}
+#sports .sports-top {
+  max-width: 1000px;
+}
+#sports .sports-bottom {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  #sports .sports-bottom {
+    flex-basis: 45%;
+    margin: 2.5%;
+  }
+}
+@media (min-width: 1200px) {
+  #sports .sports-bottom {
+    flex-basis: 22%;
+    margin: 1.5%;
+  }
+}
+#sports .sports-img {
+  height: 20rem;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+#sports .sports-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s ease;
+}
+#sports .sports-item {
+  flex-basis: 80%;
+  display: inline-block;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 13px;
+  padding-bottom: 20px;
+  margin: 3%;
+  background-size: cover;
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1725490196);
+  transition: 0.3s ease box-shadow;
+  overflow: hidden;
+}
+@media (min-width: 600px) {
+  #sports .sports-item {
+    flex-basis: 65%;
+  }
+}
+@media (min-width: 768px) {
+  #sports .sports-item {
+    flex-basis: 45%;
+    margin: 2.5%;
+  }
+}
+@media (min-width: 1200px) {
+  #sports .sports-item {
+    flex-basis: 30%;
+    margin: 1.5%;
+  }
+}
+#sports .sports-item h2 {
+  padding: 5px 20px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+#sports .sports-item p {
+  padding: 0 20px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-indent: 1rem;
+  text-align: left;
+}
+#sports .sports-item:hover {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1725490196);
+}
+#sports .sports-item:hover .sports-img img {
+  transform: scale(1.1);
+}
+
+/* ====== end Sports club Section ====== */
+/* ====== culture club Section ====== */
+#culture {
+  background: #fff;
+}
+#culture .culture {
+  flex-direction: column;
+  padding: 70px 0;
+}
+#culture .culture-top {
+  max-width: 1000px;
+}
+#culture .culture-bottom {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  #culture .culture-bottom {
+    flex-basis: 45%;
+    margin: 2.5%;
+  }
+}
+@media (min-width: 1200px) {
+  #culture .culture-bottom {
+    flex-basis: 22%;
+    margin: 1.5%;
+  }
+}
+#culture .culture-img {
+  height: 20rem;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+#culture .culture-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s ease;
+}
+#culture .culture-item {
+  flex-basis: 80%;
+  display: inline-block;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 13px;
+  padding-bottom: 20px;
+  margin: 3%;
+  background-size: cover;
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1725490196);
+  transition: 0.3s ease box-shadow;
+  overflow: hidden;
+}
+@media (min-width: 600px) {
+  #culture .culture-item {
+    flex-basis: 65%;
+  }
+}
+@media (min-width: 768px) {
+  #culture .culture-item {
+    flex-basis: 45%;
+    margin: 2.5%;
+  }
+}
+@media (min-width: 1200px) {
+  #culture .culture-item {
+    flex-basis: 30%;
+    margin: 1.5%;
+  }
+}
+#culture .culture-item h2 {
+  padding: 5px 20px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+#culture .culture-item p {
+  padding: 0 20px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-indent: 1rem;
+  text-align: left;
+}
+#culture .culture-item:hover {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1725490196);
+}
+#culture .culture-item:hover .culture-img img {
+  transform: scale(1.1);
+}
+
+/* ====== end culture club Section ====== */
+/* ====== tech club Section ====== */
+#tech .tech {
+  flex-direction: column;
+  margin: 70px auto;
+}
+#tech .tech-top {
+  max-width: 1000px;
+}
+#tech .tech-bottom {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  #tech .tech-bottom {
+    flex-basis: 45%;
+    margin: 2.5%;
+  }
+}
+@media (min-width: 1200px) {
+  #tech .tech-bottom {
+    flex-basis: 22%;
+    margin: 1.5%;
+  }
+}
+#tech .tech-img {
+  height: 20rem;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+#tech .tech-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.3s ease;
+}
+#tech .tech-item {
+  flex-basis: 80%;
+  display: inline-block;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 13px;
+  padding-bottom: 20px;
+  margin: 3%;
+  background-size: cover;
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.1725490196);
+  transition: 0.3s ease box-shadow;
+  overflow: hidden;
+}
+@media (min-width: 600px) {
+  #tech .tech-item {
+    flex-basis: 65%;
+  }
+}
+@media (min-width: 768px) {
+  #tech .tech-item {
+    flex-basis: 45%;
+    margin: 2.5%;
+  }
+}
+@media (min-width: 1200px) {
+  #tech .tech-item {
+    flex-basis: 30%;
+    margin: 1.5%;
+  }
+}
+#tech .tech-item h2 {
+  padding: 5px 20px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+#tech .tech-item p {
+  padding: 0 20px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-indent: 1rem;
+  text-align: left;
+}
+#tech .tech-item:hover {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1725490196);
+}
+#tech .tech-item:hover .tech-img img {
+  transform: scale(1.1);
+}
+
+/* ====== end tech club Section ====== */
+/* ====== Footer====== */
+footer {
+  padding: 25px 0;
+  text-align: center;
+  background: #444;
+}
+footer small {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ====== End Footer ====== *//*# sourceMappingURL=style.css.map */

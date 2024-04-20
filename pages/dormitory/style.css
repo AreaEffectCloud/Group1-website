@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap");
+#faq .faq, #event .event, #facility .facility, #schedule .schedule, #about .about {
+  padding: 45px 20px;
+}
+@media (min-width: 768px) {
+  #faq .faq, #event .event, #facility .facility, #schedule .schedule, #about .about {
+    padding: 50px 30px;
+  }
+}
+
+#faq .faq-item-contents-text, #facility .facility-bottom {
+  text-align: left;
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  #faq .faq-item-contents-text, #facility .facility-bottom {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  #faq .faq-item-contents-text, #facility .facility-bottom {
+    font-size: 2rem;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f8f8f8;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+hr {
+  border: none;
+  border-top: 5px double black;
+  width: 70vw;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+
+.container {
+  min-height: 50vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  letter-spacing: 0.15rem;
+}
+.section-title-description {
+  font-size: 2rem;
+  font-weight: 700;
+  text-indent: 1rem;
+  text-align: left;
+}
+
+/* ====== Hero Section ====== */
+#hero {
+  background-image: url(../../images/dormitory-top.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0;
+  z-index: -1;
+}
+#hero .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+#hero h1 {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 5rem;
+  font-weight: 900;
+  position: relative;
+  color: black;
+  text-shadow: 1px 4px 3px #fff;
+}
+
+/* ====== End Hero Section ====== */
+/* ====== About Section ====== */
+#about {
+  background: #fff;
+}
+#about .about-top {
+  max-width: 700px;
+  padding: 10px 17px 0;
+  margin-bottom: 25px;
+}
+
+/* ====== End About Section ====== */
+/* ====== Time-Schedule Section ====== */
+#schedule .schedule-top {
+  max-width: 700px;
+  padding: 10px 17px 0;
+  margin-bottom: 25px;
+}
+#schedule .schedule-bottom {
+  max-width: 1000px;
+  text-align: left;
+  font-size: 1.5rem;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  #schedule .schedule-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  #schedule .schedule-bottom {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1200px) {
+  #schedule .schedule-bottom {
+    font-size: 2rem;
+  }
+}
+#schedule .schedule-bottom-left {
+  flex: 1;
+  padding-left: 10px;
+}
+@media (max-width: 600px) {
+  #schedule .schedule-bottom-left {
+    padding: 20px 40px;
+  }
+}
+#schedule .schedule-bottom-right {
+  flex: 1;
+  padding: 0 20px;
+}
+#schedule .schedule-bottom-right p {
+  text-indent: 1rem;
+}
+#schedule .schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#schedule .schedule-table th, #schedule .schedule-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+#schedule .schedule-table th {
+  background-color: #f2f2f2;
+}
+#schedule .schedule-table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* ====== End Time-Schedule Section ====== */
+/* ====== Facility Section ====== */
+#facility .facility-top {
+  max-width: 700px;
+  padding: 10px 17px 0;
+  margin-bottom: 25px;
+}
+#facility .facility-bottom {
+  max-width: 1000px;
+  margin: 5px 0;
+}
+#facility .facility-dormitory {
+  padding: 10px 0;
+}
+#facility .facility-dormitory-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.03);
+  margin-bottom: 20px;
+  padding: 24px 30px 14px;
+}
+@media (max-width: 444px) {
+  #facility .facility-dormitory-item {
+    padding: 24px 15px 14px;
+  }
+}
+#facility .facility-dormitory-item-title {
+  font-weight: 700;
+}
+#facility .facility-dormitory-item-description {
+  text-indent: 1rem;
+  margin: 10px 30px 10px 0;
+}
+#facility .facility-list {
+  list-style-type: none;
+  letter-spacing: -0.4em;
+  margin: 30px auto;
+}
+@media (min-width: 600px) {
+  #facility .facility-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+#facility .facility-item {
+  display: inline-block;
+  width: 33.333%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  letter-spacing: normal;
+  vertical-align: top;
+}
+@media (max-width: 480px) {
+  #facility .facility-item {
+    width: 50%;
+  }
+}
+#facility .facility-item img {
+  height: auto;
+}
+#facility .facility-item p {
+  font-weight: 500;
+  text-align: center;
+  padding-left: 5px;
+}
+
+/* ====== End Facility Section ====== */
+/* ====== Events Section ====== */
+#event .event {
+  flex-direction: column;
+}
+#event .event-top {
+  max-width: 700px;
+  padding: 10px 17px 0;
+}
+#event .event-bottom {
+  max-width: 1000px;
+  margin: 5px 0;
+}
+#event .event-bottom-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 15px;
+}
+#event .event-bottom-item-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+#event .event-bottom-item-description {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-indent: 1rem;
+  text-align: left;
+}
+#event .event-list {
+  list-style-type: none;
+  letter-spacing: -0.4em;
+  margin: 30px auto;
+}
+@media (min-width: 600px) {
+  #event .event-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+#event .event-item {
+  display: inline-block;
+  width: 33.333%;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  letter-spacing: normal;
+  vertical-align: top;
+}
+@media (max-width: 480px) {
+  #event .event-item {
+    width: 50%;
+  }
+}
+#event .event-item img {
+  height: auto;
+}
+
+/* ====== End Events Section ====== */
+/* ====== FAQ Section ====== */
+#faq {
+  background: #f8f8f8;
+}
+#faq .faq {
+  flex-direction: column;
+}
+#faq .faq-top {
+  max-width: 500px;
+}
+#faq .faq-bottom {
+  max-width: 1000px;
+  margin-top: 20px;
+}
+#faq .faq-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.03);
+  margin-bottom: 20px;
+  padding: 24px 30px 14px;
+}
+@media (max-width: 444px) {
+  #faq .faq-item {
+    padding: 24px 15px 14px;
+  }
+}
+#faq .faq-item-contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+#faq .faq-item-contents-text {
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  transition: color 0.2s ease-in-out;
+}
+#faq .faq-item-contents-img {
+  padding-top: 7px;
+  transform-origin: center;
+  transform: rotate(0);
+  transition: transform 0.2s ease-in-out;
+}
+#faq .faq-item-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+  margin: 10px 30px 0 0;
+}
+#faq .faq-item-answer-text {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #333333;
+  text-align: left;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  #faq .faq-item-answer-text {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  #faq .faq-item-answer-text {
+    font-size: 1.75rem;
+  }
+}
+
+/* ====== End FAQ Section ====== */
+/* ====== Footer====== */
+footer {
+  padding: 25px 0;
+  text-align: center;
+  background: #444;
+}
+footer small {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ====== End Footer ====== *//*# sourceMappingURL=style.css.map */

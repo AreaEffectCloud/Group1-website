@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700;900&display=swap");
+#about .about {
+  padding: 100px 20%;
+}
+@media (max-width: 1280px) {
+  #about .about {
+    padding: 80px 10%;
+  }
+}
+@media (max-width: 768px) {
+  #about .about {
+    padding: 80px 5%;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+hr {
+  border: none;
+  border-top: 2.5px solid #2e792d;
+  margin: 0 20px;
+  width: 70vw;
+}
+
+.container {
+  min-height: 50vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  letter-spacing: 0.15rem;
+}
+.section-title-description {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-indent: 1rem;
+  text-align: left;
+}
+
+/* ====== Hero Section ====== */
+#hero .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  justify-content: flex-start;
+}
+#hero .titlebox {
+  background: #2e792d;
+  padding: 50px 10px;
+}
+#hero h1 {
+  font-size: clamp(4rem, 8vw, 5rem);
+  word-break: keep-all;
+  font-weight: 700;
+  color: white;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+#hero .top-cover {
+  z-index: -1;
+  overflow: hidden;
+}
+#hero .top-cover img {
+  width: 100%;
+  position: absolute;
+  top: -50%;
+  bottom: -30%;
+  left: -50%;
+  right: -50%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* ====== End Hero Section ====== */
+/* ====== About Section ====== */
+#about {
+  background: #fff;
+}
+#about .about {
+  flex-direction: column;
+}
+#about .about-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 700px;
+}
+#about .about-top-description {
+  padding: 10px 20px 0 20px;
+  margin-bottom: 25px;
+}
+#about .about-top-description-list {
+  padding-bottom: 20px;
+}
+#about .about-top-description p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: left;
+}
+#about .about-top-description ul {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+#about .about-top-description ul li {
+  list-style: inside;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 2rem;
+}
+#about .about-bottom {
+  margin-bottom: 50px;
+}
+@media (min-width: 600px) {
+  #about .about-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+#about .about-bottom-item {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  flex-basis: 25%;
+}
+@media (min-width: 600px) {
+  #about .about-bottom-item {
+    padding: 10px;
+  }
+}
+#about .about-bottom-item-img {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+#about .about-bottom-item h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: left;
+}
+#about .about-bottom-item p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* ====== End About Section ====== */
+/* ====== Study Section ====== */
+#study .study {
+  flex-direction: column;
+  margin: 70px auto;
+}
+#study .study-top {
+  max-width: 700px;
+}
+@media (min-width: 789px) {
+  #study .study-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+#study .study-bottom {
+  max-width: 1200px;
+  background: #fff;
+  box-shadow: 7.5px 7.5px 5px rgba(0, 0, 0, 0.1725490196);
+  border-radius: 10px;
+  padding: 20px 10px;
+  margin: 40px 20px;
+}
+@media (max-width: 600px) {
+  #study .study-bottom {
+    margin: 20px;
+  }
+}
+#study .study-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 0 20px 0;
+}
+@media (min-width: 600px) {
+  #study .study-item {
+    padding: 0 50px 20px 50px;
+  }
+}
+#study .study-item-contents {
+  width: 100%;
+  text-align: left;
+}
+#study .study-item-contents h2 {
+  padding: 5px 20px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-indent: 2rem;
+}
+#study .study-item-contents p {
+  padding: 0 20px;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+/* ====== end Study Section ====== */
+/* ====== Footer====== */
+footer {
+  padding: 25px 0;
+  text-align: center;
+  background: #444;
+}
+footer small {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ====== End Footer ====== *//*# sourceMappingURL=style.css.map */
